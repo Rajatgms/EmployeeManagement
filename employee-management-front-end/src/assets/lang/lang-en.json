@@ -1,0 +1,47 @@
+{
+  "EMPLOYEES_TEXT": "Employees",
+  "DASHBOARD_TEXT": "Dashboard",
+  "LOGOUT_TEXT": "Log Out",
+  "ABOUT_TEXT": "About",
+  "HELP_TEXT": "Help",
+
+  "ADD_EMPLOYEE_TEXT": "Add Employee",
+  "NO_EMPLOYEE_TEXT": "No Employee",
+  "NO_EMPLOYEE_FOUND_TEXT": "No Employee found",
+  "EMPLOYEE_TEXT": "Employee",
+
+  "NAME_TEXT": "Name",
+  "FIRST_NAME_TEXT": "First Name*",
+  "LAST_NAME_TEXT": "Last Name*",
+  "EMAIL_TEXT": "Email",
+  "PHONE_TEXT": "Phone",
+  "DATE_OF_BIRTH_TEXT": "Date Of Birth*",
+  "DATE_OF_JOINING_TEXT": "Date Of Joining*",
+  "DEPARTMENT_TEXT": "Department",
+
+  "FIRST_NAME_REQUIRED_TEXT": "First Name is required.",
+  "LAST_NAME_REQUIRED_TEXT": "Last name is required.",
+  "DATE_OF_JOINING_REQUIRED_TEXT": "Date of joining is required",
+  "DATE_OF_BIRTH_REQUIRED_TEXT": "Date of birth is required",
+  "INPUT_FIELD_CONTAINS_ILLEGAL_CHARACTERS": "Input field contains illegal character.",
+  "TO_MANY_CHARACTERS_TEXT": "Input exceed 120 character limit.",
+  "VALID_PHONE_TEXT": "Phone must be valid",
+  "DOB_VALID_DATE_TEXT": "Date of birth must be valid",
+  "DOJ_VALID_DATE_TEXT": "Date of joining must be valid",
+  "VALID_E_MAIL_TEXT": "E-mail must be valid.",
+  "EMAIL_REQUIRED_TEXT": "E-mail is required.",
+
+  "PERSONAL_DETAIL_TEXT": "Personal Detail",
+  "JOINING_DETAIL_TEXT": "Joining Detail",
+
+  "CANCEL_TEXT": "Cancel",
+  "NEXT_TEXT": "Next",
+  "PREVIOUS_TEXT": "Previous",
+  "CONFIRM_TEXT": "Confirm",
+
+  "EMPLOYEE_SUCCESSFULLY_ADDED_TEXT": "Employee Successfully added.",
+  "DO_YOU_WANT_TO_ADD_ANOTHER_EMPLOYEE_TEXT": "Do you want to add new employee?",
+  "YES_ADD_NEW_EMPLOYEE_TEXT": "Add another employee",
+  "NO_NOT_NOW_TEXT": "No, not now",
+  "BROWSER_CONFIRM_MESSAGE": "Would you like to exit without saving your changes"
+}

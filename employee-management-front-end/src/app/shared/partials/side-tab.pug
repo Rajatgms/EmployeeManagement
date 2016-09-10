@@ -1,0 +1,12 @@
+div.side-container
+    div.side-tab-container.hidden-xs
+        div.side-tab-item
+            a(id='employee', ui-sref='side-tab.employee', ui-sref-active='active')
+                div.flaticon-users41
+                span(translate='EMPLOYEES_TEXT')
+        div.side-tab-item
+            a(id='department', ui-sref='side-tab.dashboard', ui-sref-active='active')
+                div.flaticon-dashboard2
+                span(translate='DASHBOARD_TEXT')
+    div.side-main-container
+        div.container(ui-view='side-tab-main-view')

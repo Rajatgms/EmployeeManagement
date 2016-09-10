@@ -1,0 +1,43 @@
+.navbar {
+  background-color: $navbar-background-color;
+  border-radius: 0;
+  border: none;
+  border-bottom: 0.5em solid $navbar-bottom-border-color;
+  margin: 0;
+
+  a {
+    color: $navbar-link-color;
+
+    &:hover, &:focus, &:visited{
+      color: $navbar-link-color;
+    }
+  }
+
+  .navbar-brand {
+    padding-top: 10px;
+    span:last-child {
+      margin-left: 2em;
+      font-size: x-large;
+      vertical-align: super;
+    }
+    .circle {
+      margin-left: 1.3em;
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      display: inline-block;
+      background: $navbar-brand-icon-color;
+      //box-shadow: 8px 0px 0px 0px #144396, 16px 0px 0px 0px #6685BB;
+      box-shadow: 8px 0 0 0 transparentize($navbar-brand-icon-color, 0.3), 16px 0 0 0 transparentize($navbar-brand-icon-color, 0.4);
+    }
+  }
+  .navbar-header .navbar-toggle .icon-bar{
+    background-color: $navbar-burger-icon-color;
+  }
+
+  .dropdown-menu > li > a{
+    @media(max-width: 768px){
+      font-size: 10px;
+    }
+  }
+}

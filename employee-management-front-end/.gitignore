@@ -1,0 +1,8 @@
+.idea
+node_modules
+employee
+build
+typings
+EmployeeManagement.iml
+.sass-cache
+.tmp

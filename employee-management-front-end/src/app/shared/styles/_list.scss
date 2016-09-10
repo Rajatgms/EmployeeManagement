@@ -1,0 +1,45 @@
+ul.listing {
+  padding: 2em 2em 0 2em;
+  .flaticon-check33::before{
+    float: right;
+    font-size: 2.5em;
+    color: $green-color;
+    line-height: 1;
+  }
+  .list-count {
+    text-transform: lowercase;
+
+    span:first-child{
+      margin-right: 5px;
+    }
+  }
+  li{
+    list-style: none;
+    padding: 0.7em;
+    border-top: 1px solid $list-item-border-color;
+    .col-md-11{
+      width: 84.8%
+    }
+
+    .list-detail {
+      font-size: 0.9em;
+      font-style: italic;
+      padding-top: 0.3em;
+      label{
+        font-style: normal;
+      }
+      div:first-child{
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+.list-round-icon{
+  background: $list-default-round-icon-background-color;
+  border-radius: 50%;
+  padding: .2em .25em;
+  color: white;
+  font-size: 2em;
+}

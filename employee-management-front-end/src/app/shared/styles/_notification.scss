@@ -1,0 +1,73 @@
+//style for notification alerts
+.notify-addInfo, .notify-addWarn, .notify-addError{
+  padding: 1em 0 1em 1em;
+  display: table;
+  position: fixed;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+
+  .md-toast-content{
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+    height: auto;
+    min-height: 0;
+    transition: none;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .horizontal-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover{
+      cursor: pointer;
+      outline: 0;
+    }
+  }
+}
+.notify-addInfo{
+  background-color: $notify-info;
+  color: $notify-text-color;
+  .alert-info{
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+.notify-addWarn{
+  background-color: $notify-warn;
+  color: $notify-text-color;
+}
+
+.notify-addError{
+  background-color: $notify-error;
+  color: $notify-text-color;
+}
+
+@media (max-width: 768px){
+  md-toast{
+    &.notify-addWarn, &.notify-addError, &.notify-addInfo{
+      z-index: 1051;
+      position: fixed;
+      bottom: 0;
+      top: auto !important;
+      width: 100%;
+      right: 0;
+      transition: none;
+    }
+  }
+}
+@media (min-width: 768px){
+  md-toast{
+    z-index: 1051;
+    &.notify-addWarn, &.notify-addError, &.notify-addInfo{
+      top: 4em;
+      max-width: 300px;
+    }
+  }
+}

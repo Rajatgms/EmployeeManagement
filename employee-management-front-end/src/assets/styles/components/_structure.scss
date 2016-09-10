@@ -1,0 +1,81 @@
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  word-wrap: break-word !important;
+  overflow: auto;
+  font-size: 14px;
+
+  @media (max-width: 768px){
+    font-size: 10px;
+  }
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+a {
+  color: $black-tint-80;
+
+  &:hover, &:focus, &:visited{
+    color: $blue-tint-50;
+  }
+}
+
+.center-align{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-center{
+  text-align: center;
+}
+
+.font-size-2em{
+  font-size: 2em;
+}
+
+.margin-top-5em {
+  margin-top: 5em;
+}
+
+.margin-top-1em {
+  margin-top: 1em;
+}
+
+.margin-top-bottom-1em {
+  margin: 1em 0;
+}
+
+hr.close-line {
+  margin-top: -2px;
+  border-color: $black-tint-75;
+}
+
+hr.hr-orange {
+  border-bottom: 0.3em solid $border-separator;
+  margin-top: 0;
+}
+
+.hint {
+  font-size: 0.9em;
+}
+
+.margin-zero{
+  margin: 0 !important;
+}
+
+.padding-zero{
+  margin: 0 !important;
+}
+
+.margin-padding-zero{
+  margin: 0 !important;
+}

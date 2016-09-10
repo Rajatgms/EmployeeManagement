@@ -1,0 +1,19 @@
+'use strict';
+
+module.exports = function (gulp, config, $) {
+    return function () {
+        $.util.log($.util.colors.yellow.bold('Minify css, js and html'));
+        gulp
+               .src(config.buildFolder + '/styles/*.css')
+               .pipe($.minifyCss())
+               .pipe(gulp.dest(config.distFolder + '/styles'));
+        return gulp
+               .src(config.buildFolder + '/*.html')
+               .pipe($.usemin({
+                   css: [$.minifyCss(), $.rev()],
+                   html:[$.htmlmin({maxLineLength: 200, removeComments: true, collapseWhitespace:true})],
+                   js: [$.ngAnnotate(), $.uglify(), $.rev()]
+               }))
+               .pipe(gulp.dest(config.distFolder));
+    };  
+};

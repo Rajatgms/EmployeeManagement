@@ -1,0 +1,75 @@
+.side-container{
+  height: 100%;
+  //position: absolute;
+  width: 100%;
+  background-size: cover;
+  .side-tab-container{
+    height: 100%;
+    //height: calc(100% - 213px);
+    position: absolute;
+    width: 125px;
+    background-color: $side-tab-container-background-color;
+    padding: 0;
+    .side-tab-item{
+      text-align: center;
+      border-left: 0.7em solid $side-tab-container-background-color;
+      &:hover{
+        border-left-color: $side-tab-item-border-hover-color;
+      }
+      a{
+        font-size: 1em;
+        padding: 1em 1em 1em 0;
+        color: $side-tab-item-text-color;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        &:hover{
+          color: $side-tab-item-text-color;
+        }
+        &.active::after{
+          content: '';
+          position: absolute;
+          border-top: 1.1em solid transparent;
+          border-bottom: 1.1em solid transparent;
+          border-right: 1.5em solid $background-color;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+        div[class^= flaticon]{
+          font-size: 3.5em;
+          line-height: 1;
+        }
+
+        .flaticon-building113.floor-planner {
+          font-size: 2.75em;
+          margin-bottom: 10px;
+
+          &::before {
+            background-color: white;
+            color: $side-tab-container-background-color;
+            padding: 4px 4px 2px;
+            border-radius: 5px;
+          }
+        }
+        .flaticon-closed42{
+          margin-bottom: 5px;
+        }
+        .flaticon-circle108.access-area{
+          position: absolute;
+          top:0.5px;
+          right:35px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .side-main-container{
+    @media(min-width: 768px){
+      margin-left: 125px;
+    }
+    >.container{
+      padding-top: 1em;
+    }
+  }
+}

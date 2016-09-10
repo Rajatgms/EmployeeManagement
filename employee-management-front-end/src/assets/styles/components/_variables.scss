@@ -1,0 +1,118 @@
+/* New colors */
+$black-tint-90: #414042;
+$black-tint-80: #58595B;
+$black-tint-75: #636466;
+$black-tint-70: #6D6E70;
+$black-tint-60: #808285;
+$black-tint-50: #939598;
+$black-tint-40: #A7A9AC;
+$black-tint-30: #BCBEC0;
+$black-tint-25: #D1D1D2;
+$black-tint-20: #D1D3D4;
+$black-tint-15: #DBDDDE;
+$black-tint-10: #E6E7E8;
+$black-tint-7: #F2F2F3;
+$black-tint-5: #FCFBFC;
+
+$red-tint-100: #983222;
+$red-tint-70: #B8624B;
+$red-tint-50: #CA8670;
+
+$green-tint-100: #70927A;
+$green-tint-50: #A6BBB8;
+
+$blue-tint-100: #00A0D0;
+$blue-tint-50: #93CBE4;
+
+$yellow-tint-100: #F2DF74;
+$yellow-tint-50: #FFF3C1;
+
+$purple-tint-100: #002970;
+$purple-tint-80: #00338D;
+$purple-tint-50: rgb(57,73,171);
+
+//Color
+$text-color: #000000;
+$text-hover-color: #FFFFFF;
+$yellow-color: #FFCC00;
+$gray-100: rgb(139, 141, 142);
+$gray-80: rgb(162, 164, 165);
+$gray-60: rgb(185, 187, 187);
+$gray-40: rgb(209, 209, 210);
+$gray-20: rgb(232, 232, 232);
+$silver-color: #C3C4BE;
+$blue-color: #0057B8;
+$green-color: #009639;
+$red-color:  #E4002B;
+
+$disabled-text-color: $gray-100;
+$border-separator: #E37222;
+
+
+
+$background-color: #FFFFFF;
+
+//Control specific color
+$warning-sign-color: #FF0000;
+$success-sign-color: #CCD6E8;
+
+
+//navigation
+$navbar-background-color: $background-color;
+$navbar-bottom-border-color: $border-separator;
+$navbar-burger-icon-color: $black-tint-80;
+$navbar-brand-icon-color: $purple-tint-100;
+$navbar-link-color: $black-tint-80;
+
+//side-tab
+$side-tab-container-background-color: $black-tint-80;
+$side-tab-item-border-hover-color: $black-tint-15;
+$side-tab-item-text-color: #FFFFFF;
+
+//icon-button
+$icon-button-color: $text-color;
+$icon-button-disabled-color: $gray-60;
+$icon-text-color: $text-color;
+
+//material UI
+$material-button-border-color: $gray-20;
+$material-button-primary-color: $purple-tint-80;
+$material-button-primary-hover-color: $purple-tint-100;
+$material-button-primary-dark-color: $purple-tint-80;
+$material-button-primary-dark-hover-color: $purple-tint-100;
+$material-button-secondary-color: $black-tint-50;
+$material-button-secondary-hover-color: $black-tint-25;
+$material-button-warning-color: $red-color;
+$material-button-other-text-color: #58595B;
+$material-button-other-color: #FFFFFF;
+$material-button-other-hover-color: #EEEEEE;
+$material-button-default-color: #FFFFFF;
+$material-text-color: #000000;
+$material-box-shadow-color: #FFFFFF;
+$material-button-disabled-color: $gray-60;
+$material-text-disabled-color: #FFFFFF;
+
+// form-control
+$form-control-border-color: #CCCCCC;
+
+//wizard color
+$wiz-untouched-item-text-color: $gray-40;
+$wiz-current-item-text-color: $text-color;
+$wiz-done-item-background-color: $gray-100;
+$wiz-done-item-text-color:$gray-100;
+$wiz-current-item-background-color: $purple-tint-100;
+$wiz-connecting-line-color:$gray-80;
+$wiz-untouched-item-background-color:$gray-40;
+
+// employee color
+$browse-employee-icon-background-color: $black-tint-15;
+
+//list
+$list-item-border-color: $black-tint-15;
+$list-default-round-icon-background-color: $black-tint-50;
+
+//notify
+$notify-info: #5cb85c;
+$notify-warn: #f0ad4e;
+$notify-error: #983222;
+$notify-text-color: #FFFFFF;

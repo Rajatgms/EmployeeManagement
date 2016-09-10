@@ -1,0 +1,45 @@
+//placeholder style
+::-webkit-input-placeholder {
+  color: $disabled-text-color;
+  font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $disabled-text-color;
+  font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $disabled-text-color;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  color: $disabled-text-color;
+  font-style: italic;
+}
+
+// form control
+label {
+  font-weight: normal;
+  font-size: 0.85em;
+}
+
+.form-control {
+  border-radius: 0;
+  height: 38px;
+  box-shadow: none;
+
+  &:focus{
+    border-color: $form-control-border-color;
+    box-shadow: none;
+  }
+}
+
+// input group
+.input-group {
+  .input-group-addon {
+    border-radius: 0;
+    background-color: transparent;
+  }
+}

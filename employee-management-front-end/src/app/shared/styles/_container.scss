@@ -1,0 +1,13 @@
+.view-container{
+  position: relative;
+  min-height: calc(100% - 58px);
+}
+.border-box{
+  border: 1px solid;
+  padding: 1em;
+
+  hr {
+    border-bottom: 0.5em solid $border-separator;
+    margin: 1em -14px 0 -14px;
+  }
+}

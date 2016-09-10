@@ -1,0 +1,6 @@
+div
+    div
+        ul(class='steps-indicator steps-{{steps.length}}')
+            li(ng-class!="{default: !step.completed && !step.selected, current: step.selected && !step.completed, done: step.completed && !step.selected, editing: step.selected && step.completed}", ng-repeat="step in steps")
+                a(ng-click='goTo(step)', ng-bind='step.title || step.wzTitle')
+    div.steps(ng-transclude='')

@@ -1,0 +1,48 @@
+.steps-indicator {
+  position: relative;
+  li {
+    line-height: 2.5em;
+    a {
+      color: $wiz-untouched-item-text-color;
+    }
+    &.current a, &.editing a {
+      color: $wiz-current-item-text-color;
+    }
+    a:before {
+      top: -0.75em;
+      width: 1.5em;
+      height: 1.5em;
+      background-color: $wiz-untouched-item-background-color;
+    }
+    &.current a:before {
+      background-color: $wiz-current-item-background-color;
+      border: white 6px double;
+    }
+    &.done a{
+      color: $wiz-done-item-text-color;
+      &:before {
+        background-color: $wiz-done-item-background-color;
+      }
+    }
+    &.editing a:before {
+      background-color: $wiz-current-item-background-color;
+      border: white 6px double;
+    }
+  }
+  &:before{
+    background-color: $wiz-connecting-line-color;
+  }
+}
+
+.wizard-padding-top {
+  padding-top: 4em;
+
+  >div:first-child{
+   min-height: 35em;
+  }
+}
+
+.wizard-steps-indicator-margin {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
