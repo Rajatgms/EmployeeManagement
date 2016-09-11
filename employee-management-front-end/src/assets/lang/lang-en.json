@@ -23,6 +23,7 @@
   "DATE_OF_JOINING_TEXT": "Date Of Joining*",
   "DATE_OF_JOINING_ONLY_TEXT": "Date of joining",
   "DEPARTMENT_TEXT": "Department*",
+  "DEPARTMENT_ONLY_TEXT": "Department",
 
   "FIRST_NAME_REQUIRED_TEXT": "First Name is required.",
   "LAST_NAME_REQUIRED_TEXT": "Last name is required.",
