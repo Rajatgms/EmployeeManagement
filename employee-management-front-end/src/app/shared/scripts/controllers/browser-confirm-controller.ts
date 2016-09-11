@@ -24,7 +24,7 @@ namespace employeeManagement.shared {
                 }
             };
         };
-    };
+    }
     angular.module('employeeManagement.shared')
         .controller('BrowserConfirmController', BrowserConfirmController);
 }

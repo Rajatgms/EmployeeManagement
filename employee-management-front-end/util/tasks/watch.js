@@ -11,7 +11,7 @@ module.exports = function (gulp, config, $) {
             gulpSequence('compile-pug', browserSync.reload);
         });
         gulp.watch(config.tsFiles, function(){
-            gulpSequence('lint-ts', 'compile-ts', 'test', browserSync.reload);
+            gulpSequence('lint-ts', 'compile-ts', browserSync.reload);
         });
         gulp.watch(config.assets, function () {
             gulpSequence('copy-build-files', browserSync.reload);

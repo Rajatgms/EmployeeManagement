@@ -36,7 +36,7 @@ namespace employeeManagement.shared {
                 });
             }
         };
-    };
+    }
     NotificationService.$inject = ['$mdToast'];
     angular.module('employeeManagement.shared').factory('notificationService', NotificationService);
 }

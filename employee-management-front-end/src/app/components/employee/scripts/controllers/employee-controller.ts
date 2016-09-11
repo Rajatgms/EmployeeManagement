@@ -23,7 +23,5 @@ namespace employeeManagement.employee {
       });
     }
   }
-
   angular.module('employeeManagement.employee').controller('EmployeeController', EmployeeController);
-
 }
