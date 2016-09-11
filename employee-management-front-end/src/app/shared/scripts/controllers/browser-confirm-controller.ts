@@ -18,12 +18,11 @@ namespace employeeManagement.shared {
                     $scope.$emit('stopSpinner');
                 }
             });
-            $scope.onBeforeUnload = () => {
+            window.onbeforeunload = () => {
                 if ($scope.dirty) {
                     return confirmMessage;
                 }
             };
-            window.onbeforeunload = $scope.onBeforeUnload;
         };
     };
     angular.module('employeeManagement.shared')

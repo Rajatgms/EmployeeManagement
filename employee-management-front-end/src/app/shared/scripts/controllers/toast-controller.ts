@@ -1,6 +1,6 @@
 namespace employeeManagement.shared {
     'use strict';
-    export class ToastCtrl implements IToastCtrl {
+    export class ToastController implements IToastController {
         mdToast: angular.material.IToastService;
         constructor($mdToast: angular.material.IToastService) {
             this.mdToast = $mdToast;
@@ -9,5 +9,5 @@ namespace employeeManagement.shared {
             this.mdToast.hide();
         };
     }
-    angular.module('employeeManagement.shared').controller('ToastCtrl', ToastCtrl);
+    angular.module('employeeManagement.shared').controller('ToastController', ToastController);
 }

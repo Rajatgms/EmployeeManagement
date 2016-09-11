@@ -4,7 +4,7 @@ namespace employeeManagement.shared {
         return {
             addError: function(message: string): void {
                 $mdToast.show({
-                    controller: ToastCtrl,
+                    controller: ToastController,
                     controllerAs: 'ToastCtrl',
                     hideDelay: 0,
                     position: 'top right',
@@ -15,7 +15,7 @@ namespace employeeManagement.shared {
             },
             addInfo: function(message: string): void {
                 $mdToast.show({
-                    controller: ToastCtrl,
+                    controller: ToastController,
                     controllerAs: 'ToastCtrl',
                     hideDelay: 7000,
                     position: 'top right',
@@ -26,7 +26,7 @@ namespace employeeManagement.shared {
             },
             addWarn: function(message: string): void {
                 $mdToast.show({
-                    controller: ToastCtrl,
+                    controller: ToastController,
                     controllerAs: 'ToastCtrl',
                     hideDelay: 7000,
                     position: 'top right',

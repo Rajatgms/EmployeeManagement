@@ -3,13 +3,12 @@ namespace employeeManagement.employee {
     export class AddEmployeeController implements IAddEmployeeController {
         personalDetailForm: ng.IFormController;
         employee: IEmployee;
-        employeeService: IEmployeeService;
         departments: [string];
-        notificationService: employeeManagement.shared.INotificationService;
         validationPatterns: any;
-        $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance;
         state: string;
-
+        private employeeService: IEmployeeService;
+        private notificationService: employeeManagement.shared.INotificationService;
+        private $uibModalInstance: angular.ui.bootstrap.IModalServiceInstance;
         constructor($uibModalInstance: angular.ui.bootstrap.IModalServiceInstance,
                     notificationService: employeeManagement.shared.INotificationService,
                     employeeService: IEmployeeService) {

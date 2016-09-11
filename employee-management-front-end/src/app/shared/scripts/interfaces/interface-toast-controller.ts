@@ -1,6 +1,6 @@
 namespace employeeManagement.shared {
     'use strict';
-    export interface IToastCtrl {
+    export interface IToastController {
         mdToast: angular.material.IToastService;
         closeToast(): void;
     }

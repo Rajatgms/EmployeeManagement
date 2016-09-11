@@ -6,6 +6,5 @@ namespace employeeManagement.shared {
         };
         dirty: boolean;
         name: ng.IFormController;
-        onBeforeUnload(): string;
     }
 }
