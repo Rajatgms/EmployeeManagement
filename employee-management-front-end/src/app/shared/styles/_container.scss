@@ -11,3 +11,27 @@
     margin: 1em -14px 0 -14px;
   }
 }
+
+.ui-select-container {
+
+  &:focus, .ui-select-match:focus {
+    outline: 0;
+  }
+
+  .ui-select-choices-row.disabled {
+    display: none;
+  }
+
+  input[type="search"]{
+    padding: 0 0 0 10px;
+    width: 98% !important;
+  }
+
+  .ui-select-placeholder{
+    font-style: italic;
+  }
+
+  .ui-select-match .form-control.ui-select-toggle {
+    padding: 10px 12px;
+  }
+}

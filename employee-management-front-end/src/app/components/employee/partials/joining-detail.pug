@@ -7,14 +7,12 @@ div.col-md-8.col-md-offset-2
             span.help-block(ng-if= 'AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$error.required && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty',
                 translate='DATE_OF_JOINING_REQUIRED_TEXT')
             span.help-block(ng-if='AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$invalid && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty', translate='DOJ_VALID_DATE_TEXT')
-        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.joiningDetailForm.department.$invalid && AddEmployeeCtrl.joiningDetailForm.department.$dirty}")
-            label(for='department', translate='DEPARTMENT_TEXT')
-            input.form-control(id='department', name='department' type='text', ng-model='AddEmployeeCtrl.employee.department',
-                    ng-pattern='AddEmployeeCtrl.validationPatterns.EMPTY_SAFE_STRING',
-                    ng-maxlength="{{AddEmployeeCtrl.validationPatterns.STANDARD_MAX_INPUT}}")
-            span.help-block(ng-if='AddEmployeeCtrl.joiningDetailForm.department.$error.pattern', translate='INPUT_FIELD_CONTAINS_ILLEGAL_CHARACTERS')
-            span.help-block(ng-if='AddEmployeeCtrl.joiningDetailForm.department.$error.maxlength', translate='TO_MANY_CHARACTERS_TEXT')
-
+        div
+            label(translate='DEPARTMENT_TEXT')
+            ui-select(ng-model='AddEmployeeCtrl.employee.department', theme='bootstrap', required)
+                ui-select-match(placeholder='select department') {{AddEmployeeCtrl.employee.department}}
+                ui-select-choices(repeat='department in AddEmployeeCtrl.departments | highlight: $select.search')
+                    div(ng-bind='department')
 div.col-xs-12
     md-button.md-raised.other-button.pull-left(aria-label='Cancel Add Employee', dirty='AddEmployeeCtrl.personalDetailForm.$dirty', modal-confirm='AddEmployeeCtrl')
         i.glyphicon.glyphicon-remove

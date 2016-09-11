@@ -6,12 +6,12 @@ div.row.padding-2em
                 ng-model="searchText", style="border-left: 0")
     div.col-xs-5
         div.btn-group.pull-right(role="group", aria-label="Select Display")
-          button(type="button", class="btn btn-default", ng-click="display=false")
-            span.glyphicon.glyphicon-th-list
-            span.space-text List-View
-          button(type="button", class="btn btn-default", ng-click="display=true")
-            span.glyphicon.glyphicon-th
-            span.space-text Detail-View
+            button(type="button", class="btn btn-default", ng-click="display=false")
+                span.glyphicon.glyphicon-th-list
+                span.space-text List-View
+            button(type="button", class="btn btn-default", ng-click="display=true")
+                span.glyphicon.glyphicon-th
+                span.space-text Detail-View
     div.col-xs-12.margin-top-1em
         div.space-text(ng-if="!items.length", translate="NO_DATA_TEXT")
         div.list-count(ng-if="items.length")
@@ -21,6 +21,9 @@ div.row.padding-2em
                 span(ng-switch-when='1', translate='RESULT_TEXT')
                 span(ng-switch-default, translate='RESULT_TEXT')
 ul.listing
-    li(ng-repeat='item in itemsFound = (items | filter: searchText) | orderBy: order')
-        div.primary-template.list-detail
-        div.secondary-template(ng-show='display')
+    li(ng-repeat='(key, values) in itemsFound = (items | filter: searchText) | orderBy: order | groupBy: group')
+        span {{key}}
+        ul
+            li(ng-repeat='item in values')
+                div.primary-template.list-detail
+                div.secondary-template(ng-show='display')

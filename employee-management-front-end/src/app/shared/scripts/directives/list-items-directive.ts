@@ -4,6 +4,7 @@ namespace employeeManagement.shared {
         $templateCache: ng.ITemplateCacheService;
         restrict: string = 'E';
         scope: Object = {
+            group: '@',
             items: '=',
             order: '@',
             placeholder: '@'

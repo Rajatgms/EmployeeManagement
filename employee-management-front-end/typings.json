@@ -15,6 +15,7 @@
     "angular-ui-bootstrap": "registry:dt/angular-ui-bootstrap#0.13.3+20160602140119",
     "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160412134757",
     "jasmine": "registry:dt/jasmine#2.2.0+20160412134438",
-    "jquery": "registry:dt/jquery#1.10.0+20160417213236"
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "lodash": "registry:dt/lodash#4.14.0+20160830145422"
   }
 }
