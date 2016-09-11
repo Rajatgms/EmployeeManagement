@@ -1,6 +1,6 @@
 div.col-md-8.col-md-offset-2
     form(name='AddEmployeeCtrl.joiningDetailForm', dirty='AddEmployeeCtrl.joiningDetailForm.$dirty',
-             browser-confirm='AddEmployeeCtrl', novalidate)
+             browser-confirm='AddEmployeeCtrl')
         div.form-group(ng-class="{'has-error': AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$invalid && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty}")
             label(for='dateOfJoining', translate='DATE_OF_JOINING_TEXT')
             input.form-control(id='dateOfJoining', name='dateOfJoining' type='date', ng-model='AddEmployeeCtrl.employee.dateOfJoining', required)

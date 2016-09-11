@@ -7,4 +7,5 @@ div.row.margin-top-5em
                    span(translate='ADD_EMPLOYEE_TEXT')
         hr.row
         div.row
-            list-items(primary-template='views/employee-primary-template.html', secondary-template='views/employee-secondary-template.html', items='EmployeeCtrl.employees')
+            list-items(primary-template='views/employee-primary-template.html', secondary-template='views/employee-secondary-template.html',
+            order="firstName", items='EmployeeCtrl.employees', placeholder="search employee")

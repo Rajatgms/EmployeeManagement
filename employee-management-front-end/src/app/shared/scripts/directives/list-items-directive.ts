@@ -4,17 +4,19 @@ namespace employeeManagement.shared {
         $templateCache: ng.ITemplateCacheService;
         restrict: string = 'E';
         scope: Object = {
-            items: '='
+            items: '=',
+            order: '@',
+            placeholder: '@'
         };
         templateUrl: string = 'views/list-items.html';
         static instance($templateCache: ng.ITemplateCacheService): ng.IDirective {
             return new ListItemsDirective($templateCache);
         };
         compile: ng.IDirectiveCompileFn = (elem: ng.IAugmentedJQuery, attr: ng.IAttributes): ng.IDirectiveLinkFn => {
-            let primaryTemplate: string = 'primaryTemplate';
-            let secondaryTemplate: string = 'secondaryTemplate';
-            let cachedPrimaryTemplate: string = this.$templateCache.get(attr[primaryTemplate]).toString();
-            let cachedSecondaryTemplate: string = this.$templateCache.get(attr[secondaryTemplate]).toString();
+            let primaryTemplate: string = 'primaryTemplate',
+                secondaryTemplate: string = 'secondaryTemplate',
+                cachedPrimaryTemplate: string = this.$templateCache.get(attr[primaryTemplate]).toString(),
+                cachedSecondaryTemplate: string = this.$templateCache.get(attr[secondaryTemplate]).toString();
             elem.find('.primary-template').append(cachedPrimaryTemplate);
             elem.find('.secondary-template').append(cachedSecondaryTemplate);
             let listItemsLinkFunction: ng.IDirectiveLinkFn;

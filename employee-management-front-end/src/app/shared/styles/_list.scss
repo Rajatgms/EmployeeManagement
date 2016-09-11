@@ -1,4 +1,6 @@
 ul.listing {
+  max-height: 40vh;
+  overflow-y: auto;
   padding: 0 2em 0 2em;
   .flaticon-check33::before{
     float: right;
