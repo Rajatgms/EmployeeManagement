@@ -8,10 +8,10 @@ div.row.padding-2em
         div.btn-group.pull-right(role="group", aria-label="Select Display")
             button(type="button", class="btn btn-default", ng-click="display=false")
                 span.glyphicon.glyphicon-th-list
-                span.space-text List-View
+                span.space-text.hidden-sm.hidden-xs List-View
             button(type="button", class="btn btn-default", ng-click="display=true")
                 span.glyphicon.glyphicon-th
-                span.space-text Detail-View
+                span.space-text.hidden-sm.hidden-xs Detail-View
     div.col-xs-12.margin-top-1em
         div.space-text(ng-if="!items.length", translate="NO_DATA_TEXT")
         div.list-count(ng-if="items.length")
