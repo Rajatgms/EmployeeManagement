@@ -21,7 +21,7 @@ var config = {
     bootstrapFile: 'src/app/*.js',
     
     karmaConfig: 'karma.conf.js',
-    distFolder: 'employee/',
+    distFolder: 'dist/',
     distCopyFolder: ['build/assets/**', 'build/views/*.html', '!build/assets/**/*.css', '!build/assets/**/*.js'],
     distCopyFolderForFonts: ['build/vendor/bootstrap/fonts/*'],
     deleteFolder: ['build', 'typings']

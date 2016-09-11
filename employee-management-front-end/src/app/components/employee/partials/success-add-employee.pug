@@ -1,0 +1,11 @@
+div.row.success-employee
+    i.flaticon-check33.success-icon
+    div.col-sm-10.col-sm-offset-1
+        h4(translate='EMPLOYEE_SUCCESSFULLY_ADDED_TEXT')
+        hr.hr-orange
+        div.margin-top-bottom-1em(style="font-size: 1.2em", translate='DO_YOU_WANT_TO_ADD_ANOTHER_EMPLOYEE_TEXT')
+div.col-xs-12
+    md-button.md-raised.md-primary.pull-right(id='yes-hand-out', aria-label='Hand out', ng-click='AddEmployeeCtrl.reset()')
+        span(translate='YES_ADD_NEW_EMPLOYEE_TEXT')
+    md-button.md-raised.other-button.pull-right(id='no-not-now', aria-label='No Not Now', ng-click='AddEmployeeCtrl.close()')
+        span(translate='NO_NOT_NOW_TEXT')

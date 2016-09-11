@@ -1,0 +1,40 @@
+div.col-md-8.col-md-offset-2
+    div.box-information
+        div.box
+            div.box-title
+                h4(translate='PERSONAL_DETAIL_TEXT')
+                hr
+            div.row
+                div.box-body.col-xs-12.col-sm-8
+                    label(translate='NAME_TEXT')
+                    div(ng-bind-template='{{AddEmployeeCtrl.employee.firstName}} {{AddEmployeeCtrl.employee.lastName}}')
+                    div(ng-show='AddEmployeeCtrl.employee.dateOfBirth')
+                        label(translate='DATE_OF_BIRTH_TEXT')
+                        div(ng-bind='AddEmployeeCtrl.employee.dateOfBirth | date: "dd-MM-yyyy"')
+                    div(ng-show='AddEmployeeCtrl.employee.email')
+                        label(translate='EMAIL_TEXT')
+                        div(ng-bind='AddEmployeeCtrl.employee.email')
+                    div(ng-show='AddEmployeeCtrl.employee.phone')
+                        label(translate='PHONE_TEXT')
+                        div(ng-bind='AddEmployeeCtrl.employee.phone')
+                div.col-xs-12.col-sm-4.text-center
+                    div.browse-employee-icon.flaticon-users81
+        div.box
+            div.box-title
+                h4(translate='JOINING_DETAIL_TEXT')
+                hr
+            div.row
+                div.box-body.col-xs-12.col-sm-8
+                    label(translate='DATE_OF_JOINING_TEXT')
+                    div(ng-bind='AddEmployeeCtrl.employee.dateOfJoining | date: "dd-MM-yyyy"')
+div.col-xs-12
+    md-button.md-raised.other-button.pull-left(aria-label='Cancel Add Employee', dirty='AddEmployeeCtrl.personalDetailForm.$dirty', modal-confirm='AddEmployeeCtrl')
+        i.glyphicon.glyphicon-remove
+        span(translate='CANCEL_TEXT')
+    md-button.md-raised.md-primary.pull-right(id='confirm-employee',
+        wz-next, aria-label='Confirm Employee')
+        span(translate='CONFIRM_TEXT')
+        span.glyphicon.glyphicon-ok
+    md-button.md-raised.md-secondary.pull-right(id='previous-confirm', wz-previous, aria-label='Previous Confirm')
+        i.glyphicon.glyphicon-chevron-left
+        span(translate='PREVIOUS_TEXT')

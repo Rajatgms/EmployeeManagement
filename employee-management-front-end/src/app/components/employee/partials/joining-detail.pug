@@ -1,0 +1,27 @@
+div.col-md-8.col-md-offset-2
+    form(name='AddEmployeeCtrl.joiningDetailForm', dirty='AddEmployeeCtrl.joiningDetailForm.$dirty',
+             browser-confirm='AddEmployeeCtrl', novalidate)
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$invalid && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty}")
+            label(for='dateOfJoining', translate='DATE_OF_JOINING_TEXT')
+            input.form-control(id='dateOfJoining', name='dateOfJoining' type='date', ng-model='AddEmployeeCtrl.employee.dateOfJoining', required)
+            span.help-block(ng-if= 'AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$error.required && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty',
+                translate='DATE_OF_JOINING_REQUIRED_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$invalid && AddEmployeeCtrl.joiningDetailForm.dateOfJoining.$dirty', translate='DOJ_VALID_DATE_TEXT')
+        div.form-group
+            label(translate='DEPARTMENT_TEXT')
+            ui-select(ng-model='AddEmployeeCtrl.employee.department')
+                ui-select-match(placeholder="Select Department") {{$select.selected.name}}
+                ui-select-choices(repeat='department in AddEmployeeCtrl.department | filter: {value: $select.search}')
+                    div(ng-bind-html='department.name| highlight: $select.search')
+div.col-xs-12
+    md-button.md-raised.other-button.pull-left(aria-label='Cancel Add Employee', dirty='AddEmployeeCtrl.personalDetailForm.$dirty', modal-confirm='AddEmployeeCtrl')
+        i.glyphicon.glyphicon-remove
+        span(translate='CANCEL_TEXT')
+    md-button.md-raised.md-primary.pull-right(id='next-confirm', ng-disabled="AddEmployeeCtrl.joiningDetailForm.$invalid"
+        wz-next, aria-label='Next is confirm screen')
+        span(translate='NEXT_TEXT')
+        span.glyphicon.glyphicon-chevron-right
+    md-button.md-raised.md-secondary.pull-right(id='previous-joining-form', wz-previous,
+        aria-label='Previous Personal Detail Form')
+        i.glyphicon.glyphicon-chevron-left
+        span(translate='PREVIOUS_TEXT')

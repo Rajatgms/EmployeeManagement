@@ -1,0 +1,14 @@
+div(ng-if="AddEmployeeCtrl.state === 'Input'")
+    div.modal-header
+        h4.modal-title(translate='ADD_EMPLOYEE_TEXT')
+    div.modal-body
+        div.row.wizard-steps-indicator-margin
+            wizard(on-finish="AddEmployeeCtrl.saveEmployee()", template="views/wizard-template.html")
+                wz-step.wizard-padding-top(wz-title='Personal Detail')
+                    include personal-detail.pug
+                wz-step.wizard-padding-top(wz-title='Joining Detail')
+                    include joining-detail.pug
+                wz-step.wizard-padding-top(wz-title='CONFIRM')
+                    include confirm-add-employee.pug
+div(ng-if="AddEmployeeCtrl.state === 'Result'")
+    include success-add-employee.pug

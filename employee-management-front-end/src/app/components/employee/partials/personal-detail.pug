@@ -1,0 +1,50 @@
+div.col-md-8.col-md-offset-2.ng-cloak
+    form(name='AddEmployeeCtrl.personalDetailForm', dirty='AddEmployeeCtrl.personalDetailForm.$dirty',
+         browser-confirm='AddEmployeeCtrl')
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.personalDetailForm.firstName.$invalid && AddEmployeeCtrl.personalDetailForm.firstName.$dirty}")
+            label(for='firstName', translate='FIRST_NAME_TEXT')
+            input.form-control(id='firstName', name='firstName', type='text', ng-model='AddEmployeeCtrl.employee.firstName',
+                autofocus, required, ng-pattern='AddEmployeeCtrl.validationPatterns.EMPTY_SAFE_STRING',
+                ng-maxlength="{{AddEmployeeCtrl.validationPatterns.STANDARD_MAX_INPUT}}")
+            span.help-block(ng-if= 'AddEmployeeCtrl.personalDetailForm.firstName.$error.required && AddEmployeeCtrl.personalDetailForm.firstName.$dirty',
+                 translate='FIRST_NAME_REQUIRED_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.firstName.$error.pattern', translate='INPUT_FIELD_CONTAINS_ILLEGAL_CHARACTERS')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.firstName.$error.maxlength', translate='TO_MANY_CHARACTERS_TEXT')
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.personalDetailForm.lastName.$invalid && AddEmployeeCtrl.personalDetailForm.lastName.$dirty}")
+            label(for='lastName', translate='LAST_NAME_TEXT')
+            input.form-control(id='lastName', name='lastName' type='text', ng-model='AddEmployeeCtrl.employee.lastName',
+                required, ng-pattern='AddEmployeeCtrl.validationPatterns.EMPTY_SAFE_STRING',
+                ng-maxlength="{{AddEmployeeCtrl.validationPatterns.STANDARD_MAX_INPUT}}")
+            span.help-block(ng-if= 'AddEmployeeCtrl.personalDetailForm.lastName.$error.required && AddEmployeeCtrl.personalDetailForm.lastName.$dirty',
+                 translate='LAST_NAME_REQUIRED_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.lastName.$error.pattern', translate='INPUT_FIELD_CONTAINS_ILLEGAL_CHARACTERS')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.lastName.$error.maxlength', translate='TO_MANY_CHARACTERS_TEXT')
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.personalDetailForm.dateOfBirth.$invalid && AddEmployeeCtrl.personalDetailForm.dateOfBirth.$dirty}")
+            label(for='dateOfBirth', translate='DATE_OF_BIRTH_TEXT')
+            input.form-control(id='dateOfBirth', name='dateOfBirth' type='date', ng-model='AddEmployeeCtrl.employee.dateOfBirth',
+             max='2000-01-31', required)
+            span.help-block(ng-if= 'AddEmployeeCtrl.personalDetailForm.dateOfBirth.$error.required && AddEmployeeCtrl.personalDetailForm.dateOfBirth.$dirty',
+                            translate='DATE_OF_BIRTH_REQUIRED_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.dateOfBirth.$invalid && AddEmployeeCtrl.personalDetailForm.dateOfBirth.$dirty', translate='DOB_VALID_DATE_TEXT')
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.personalDetailForm.email.$invalid && AddEmployeeCtrl.personalDetailForm.email.$dirty}")
+            label(for='email', translate='EMAIL_TEXT')
+            input.form-control(id='email', name='email' type='text', ng-model='AddEmployeeCtrl.employee.email',
+                ng-pattern='AddEmployeeCtrl.validationPatterns.STANDARD_EMAIL_INPUT',
+                ng-maxlength="{{AddEmployeeCtrl.validationPatterns.STANDARD_MAX_INPUT}}")
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.email.$error.pattern', translate='VALID_E_MAIL_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.email.$error.maxlength', translate='TO_MANY_CHARACTERS_TEXT')
+        div.form-group(ng-class="{'has-error': AddEmployeeCtrl.personalDetailForm.phone.$invalid && AddEmployeeCtrl.personalDetailForm.phone.$dirty}")
+            label(for='phone', translate='PHONE_TEXT')
+            input.form-control(id='phone', name='phone', type='text', ng-model='AddEmployeeCtrl.employee.phone',
+                ng-pattern='AddEmployeeCtrl.validationPatterns.STANDARD_PHONE_INPUT',
+                ng-maxlength="{{AddEmployeeCtrl.validationPatterns.STANDARD_MAX_INPUT}}")
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.phone.$error.pattern', translate='VALID_PHONE_TEXT')
+            span.help-block(ng-if='AddEmployeeCtrl.personalDetailForm.phone.$error.maxlength', translate='TO_MANY_CHARACTERS_TEXT')
+div.col-xs-12
+    md-button.md-raised.pull-left(aria-label='Cancel Add Employee', dirty='AddEmployeeCtrl.personalDetailForm.$dirty', modal-confirm='AddEmployeeCtrl')
+        i.glyphicon.glyphicon-remove
+        span(translate='CANCEL_TEXT')
+    md-button.md-raised.md-primary.pull-right(id='next-button-basic-information',
+        ng-disabled="AddEmployeeCtrl.personalDetailForm.$invalid", wz-next, aria-label='Next is Joining Detail form')
+        span(translate='NEXT_TEXT')
+        span.glyphicon.glyphicon-chevron-right

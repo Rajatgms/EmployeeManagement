@@ -1,0 +1,24 @@
+.browse-employee-icon {
+  font-size: 3.5em;
+  background-color: $browse-employee-icon-background-color;
+  margin: 5px auto;
+  width: 1.5em;
+  border-radius: 50%;
+  border: 1px solid;
+
+  &:before{
+    font-size: 0.85em;
+  }
+}
+
+.success-employee {
+  padding-top: 22%;
+  position: relative;
+  .success-icon {
+    color: $success-sign-color;
+    position: absolute;
+    font-size: 16em;
+    top: -10%;
+    left: -9%;
+  }
+}
