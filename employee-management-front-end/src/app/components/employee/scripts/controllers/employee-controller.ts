@@ -2,9 +2,9 @@ namespace employeeManagement.employee {
   'use strict';
   export class EmployeeController implements IEmployeeController {
     employees: [IEmployee];
-    private employeeService: any;
+    private employeeService: IEmployeeService;
     private $uibModal: angular.ui.bootstrap.IModalService;
-    constructor($uibModal: angular.ui.bootstrap.IModalService, employees: [IEmployee], employeeService: any) {
+    constructor($uibModal: angular.ui.bootstrap.IModalService, employees: [IEmployee], employeeService: IEmployeeService) {
       this.$uibModal = $uibModal;
       this.employeeService = employeeService;
       this.employees = employees;

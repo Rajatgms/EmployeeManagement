@@ -1,30 +1,10 @@
 div.row.margin-top-5em
     div.col-sm-8.col-sm-offset-2.border-box
         div.row
-            div.col-xs-8
-                div.input-group
-                    span.input-group-addon.flaticon-magnifying-glass32
-                    input.form-control(type='text', id="search-employee", placeholder='search for an employee',
-                        ng-model="EmployeeCtrl.searchText", aria-describedby='basic-addon1', style="border-left: 0")
-            div.col-xs-4
+            div.col-xs-4.pull-right
                 md-button.md-raised.md-primary.dark.pull-right.margin-zero(id="add-Employee", ng-click='EmployeeCtrl.addEmployee()', aria-label='Add Employee')
                    i.flaticon-add182
                    span(translate='ADD_EMPLOYEE_TEXT')
         hr.row
         div.row
-            ul.listing
-                div(ng-if="!EmployeeCtrl.employees.length", translate="NO_EMPLOYEE_TEXT")
-                div.list-count(ng-if="EmployeeCtrl.employees.length")
-                    span(ng-bind='foundEmployees.length', ng-show="foundEmployees.length")
-                    span(ng-switch='foundEmployees.length')
-                        span(ng-switch-when='0', translate='NO_EMPLOYEE_FOUND_TEXT')
-                        span(ng-switch-when='1', translate='EMPLOYEE_TEXT')
-                        span(ng-switch-default, translate='EMPLOYEES_TEXT')
-                li(ng-repeat='employee in foundEmployees = (EmployeeCtrl.employees | filter: {firstName: EmployeeCtrl.searchText}) | orderBy:"firstName"')
-                    div.row
-                        div.col-xs-12
-                            div.list-detail
-                                div(ng-bind-template="{{employee.firstName}} {{employee.lastName}}")
-                                div(ng-if='employee.email')
-                                    label Email:
-                                    span(ng-bind='employee.email')
+            list-items(primary-template='views/employee-primary-template.html', secondary-template='views/employee-secondary-template.html', items='EmployeeCtrl.employees')

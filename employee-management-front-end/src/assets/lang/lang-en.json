@@ -6,9 +6,11 @@
   "HELP_TEXT": "Help",
 
   "ADD_EMPLOYEE_TEXT": "Add Employee",
-  "NO_EMPLOYEE_TEXT": "No Employee",
-  "NO_EMPLOYEE_FOUND_TEXT": "No Employee found",
+  "NO_DATA_TEXT": "No Data Exist",
+  "NO_RESULT_FOUND_TEXT": "0 result",
   "EMPLOYEE_TEXT": "Employee",
+  "RESULT_TEXT": "Result",
+  "RESULT_TEXT": "Results",
 
   "NAME_TEXT": "Name",
   "FIRST_NAME_TEXT": "First Name*",
@@ -16,7 +18,10 @@
   "EMAIL_TEXT": "Email",
   "PHONE_TEXT": "Phone",
   "DATE_OF_BIRTH_TEXT": "Date Of Birth*",
+  "DATE_OF_BIRTH_ONLY_TEXT": "Date Of Birth",
+
   "DATE_OF_JOINING_TEXT": "Date Of Joining*",
+  "DATE_OF_JOINING_ONLY_TEXT": "Date of joining",
   "DEPARTMENT_TEXT": "Department",
 
   "FIRST_NAME_REQUIRED_TEXT": "First Name is required.",

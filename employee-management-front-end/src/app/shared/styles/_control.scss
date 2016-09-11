@@ -43,3 +43,19 @@ label {
     background-color: transparent;
   }
 }
+
+// btn-group
+.btn-group .btn{
+  padding: 9px 12px;
+  border-radius: 0;
+  &:focus{
+    outline: none;
+  }
+}
+
+.seperator-text {
+  &:before{
+    content: ' - ';
+    display: inline;
+  }
+}

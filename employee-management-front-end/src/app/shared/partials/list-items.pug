@@ -1,0 +1,26 @@
+div.row.padding-2em
+    div.col-xs-7
+        div.input-group.pull-left
+            span.input-group-addon.flaticon-magnifying-glass32
+            input.form-control(type='text', id="search", placeholder='search',
+                ng-model="searchText", aria-describedby='basic-addon1', style="border-left: 0")
+    div.col-xs-5
+        div.btn-group.pull-right(role="group", aria-label="Select Display")
+          button(type="button", class="btn btn-default", ng-click="display=false")
+            span.glyphicon.glyphicon-th-list
+            span.space-text List-View
+          button(type="button", class="btn btn-default", ng-click="display=true")
+            span.glyphicon.glyphicon-th
+            span.space-text Detail-View
+    div.col-xs-12.margin-top-1em
+        div.space-text(ng-if="!items.length", translate="NO_DATA_TEXT")
+        div.list-count(ng-if="items.length")
+            span.space-text(ng-bind='itemsFound.length', ng-show="itemsFound.length")
+            span(ng-switch='itemsFound.length')
+                span(ng-switch-when='0', translate='NO_RESULT_FOUND_TEXT')
+                span(ng-switch-when='1', translate='RESULT_TEXT')
+                span(ng-switch-default, translate='RESULT_TEXT')
+ul.listing
+    li(ng-repeat='item in itemsFound = (items | filter: searchText) | orderBy: "firstName"')
+        div.primary-template
+        div.secondary-template(ng-show='display')

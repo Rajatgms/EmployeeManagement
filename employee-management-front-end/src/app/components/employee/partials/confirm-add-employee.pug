@@ -27,6 +27,9 @@ div.col-md-8.col-md-offset-2
                 div.box-body.col-xs-12.col-sm-8
                     label(translate='DATE_OF_JOINING_TEXT')
                     div(ng-bind='AddEmployeeCtrl.employee.dateOfJoining | date: "dd-MM-yyyy"')
+                    div(ng-show='AddEmployeeCtrl.employee.department')
+                        label(translate='DEPARTMENT_TEXT')
+                        div(ng-bind='AddEmployeeCtrl.employee.department')
 div.col-xs-12
     md-button.md-raised.other-button.pull-left(aria-label='Cancel Add Employee', dirty='AddEmployeeCtrl.personalDetailForm.$dirty', modal-confirm='AddEmployeeCtrl')
         i.glyphicon.glyphicon-remove
